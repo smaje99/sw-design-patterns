@@ -1,0 +1,55 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+package "memento" {
+    class Memento {
+        - state: object
+        + Memento(state: object)
+        + getState(): object
+    }
+    
+    class Caretaker {
+        - mementos: list
+        + Caretaker()
+        + addMemento(memento: Memento)
+        + getMemento(n: int): Memento
+        + firstMemento(): Memento
+        + lastMemento(): Memento
+    }
+
+    note left of Memento::state
+        inmutable
+    end note
+}
+
+class Person {
+    - name: str
+    - age: int
+    - feel: str
+    --
+    + Person(name: str, age: int, feel: str)
+    ..Memento..
+    + createMemento(): Memento
+    + restoreMemento(memento: Memento)
+    ..Getter and Setter..
+    + getName(): str
+    + setName(name: str)
+    + getAge(): int
+    + setAge(age: int)
+    + getFeel(): str
+    + setFeel(feel: str)
+}
+
+class Client{
+  + main()
+}
+
+
+
+Memento -right-o Caretaker
+
+Person ..> Memento
+Client .left.> Person
+Client ..> Caretaker
+
+@enduml
