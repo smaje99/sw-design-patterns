@@ -1,0 +1,42 @@
+# Template Method Pattern
+
+```
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract AbstractClass {
+    templateMethod()
+    {abstract} primitive1()
+    {abstract} primitive2()
+}
+
+class SubClass1 {
+    primitive1()
+    primitive2()
+}
+
+note right of AbstractClass::templateMethod
+    ...
+    primitive1();
+    ...
+    primitive2();
+    ...
+end note
+
+note left of AbstractClass::templateMethod
+    Este método no puede
+    ser sobre escrito
+end note
+
+note right of SubClass1::primitive1
+    variant code1 ...
+end note
+
+note right of SubClass1::primitive2
+    variant code2 ...
+end note
+
+AbstractClass <|-- SubClass1
+
+@enduml
+```
