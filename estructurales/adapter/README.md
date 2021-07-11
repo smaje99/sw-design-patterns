@@ -1,0 +1,27 @@
+# Adapter Pattern
+
+```
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client
+interface Target {
+    + requiredMethod()
+}
+class Adaptee {
+    + oldMethod()
+}
+class Adapter {
+    + requiredMethod()
+}
+
+note left of Adapter::requiredMethod
+    super.oldMethod();
+end note
+
+Adaptee "1" <-down- "1" Adapter: - adaptee
+Target <|.left. Adapter: < implements
+Target "1" <-down- "1" Client: - target
+
+@enduml
+```
