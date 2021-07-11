@@ -1,0 +1,28 @@
+# Command Pattern
+
+```
+@startuml
+'https://plantuml.com/class-diagram
+
+class Invoker
+interface Command {
+    + execute()
+}
+class ConcreteCommand
+class Receiver {
+    + action()
+}
+class Client
+
+note left of ConcreteCommand
+    Receiver -> action()
+end note
+
+Invoker o-right- Command
+Command <|.. ConcreteCommand
+Receiver <-left- ConcreteCommand
+Receiver <-- Client
+ConcreteCommand <.. Client
+
+@enduml
+```
