@@ -1,0 +1,26 @@
+# Composite Pattern
+
+```
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Component {
+    + operation()
+}
+class Leaf {
+    + operation()
+}
+class Composite {
+    + operation()
+    + add()
+    + remove()
+    + getChild()
+}
+
+Component <|.. Leaf
+Component <|.down.. Composite
+
+Component "0..* child" --o "1 parent" Composite
+
+@enduml
+```
