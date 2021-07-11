@@ -1,0 +1,16 @@
+# Singleton Pattern
+
+```
+@startuml
+'https://plantuml.com/class-diagram
+
+class Singleton {
+    - instance: Singleton
+    - Singleton()
+    + getInstance(): Singleton
+}
+
+Singleton "1." *-- "1." Singleton
+
+@enduml
+```
