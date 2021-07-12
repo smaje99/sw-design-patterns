@@ -16,6 +16,11 @@ In this repo, each of the three types of design patterns is documented and coded
 | | | [Iterator][iterator_link] |
 | | | [Interpreter][interpreter_link] |
 | | | [Memento][memento_link] |  
+
+---
+## Recommendations
+It's recommended to install the [Mardown Diagrams][extension] extension on your browser to be able to watch the diagrams and have a better experience.
+
   
 [creational_link]: https://github.com/smaje99/sw-desing-patterns/tree/master/creacionales "Creational Type Patterns"
 [singleton_link]: https://github.com/smaje99/sw-desing-patterns/tree/master/creacionales/singleton "Singleton Pattern"
@@ -45,3 +50,5 @@ In this repo, each of the three types of design patterns is documented and coded
 [iterator_link]: https://github.com/smaje99/sw-desing-patterns/tree/master/comportamiento/iterator "Iterator Pattern"
 [interpreter_link]: https://github.com/smaje99/sw-desing-patterns/tree/master/comportamiento/interpreter "Interpreter Pattern"
 [memento_link]: https://github.com/smaje99/sw-desing-patterns/tree/master/comportamiento/memento "Memento Pattern"
+
+[extension]: https://chrome.google.com/webstore/detail/markdown-diagrams/pmoglnmodacnbbofbgcagndelmgaclel?hl=es
